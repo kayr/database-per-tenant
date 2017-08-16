@@ -8,7 +8,7 @@ class Vehicle implements MultiTenant<Vehicle> { // <1>
 
     static hasMany = [engines: Engine]
     static constraints = {
-        model blank:false
+        model blank:false,unique: true//make vehicle model unique
         year min:1980
     }
 }
